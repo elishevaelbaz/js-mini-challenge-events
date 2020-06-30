@@ -25,7 +25,10 @@ Try calling it a few times to see the color switch back and forth.
 Once you have it working in the console, write an event listener that will use this helper function to change the color of the header when a user clicks on it.
 
 **YOUR NOTES**
-```
+```js
+const header = document.querySelector("h1#header")
+header.addEventListener("click", function(event){
+  toggleColor(event.target)})
 
 ```
 
@@ -42,7 +45,8 @@ Some things to keep in mind:
 - Once you have access to an input field, you still need to retrieve its *value* to see what the user entered in the form!
 
 **YOUR NOTES**
-```
+```js
+e.target.name.value
 
 ```
 

@@ -40,7 +40,23 @@ function toggleColor(element) {
   }
 }
 
+// h1 change color when clicked
+const header = document.querySelector("h1#header")
+header.addEventListener("click", function(event){
+  toggleColor(event.target)})
 
 /***** Deliverable 2 *****/
+const newPlayerForm = document.querySelector("#new-player-form")
+newPlayerForm.addEventListener("submit", e => {
+  e.preventDefault()
+  const newPlayerObj = {
+    number: e.target.number.value,
+    name: e.target.name.value,
+    nickname: e.target.nickname.value,
+    photo: e.target.photo.value
+  }
+  renderPlayer(newPlayerObj)
+}
 
+)
 /***** Deliverable 3 *****/
